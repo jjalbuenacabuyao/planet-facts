@@ -1,7 +1,7 @@
+import Header from './components/Header';
 import './globals.css'
-import { Antonio, League_Spartan } from 'next/font/google'
+import { League_Spartan } from 'next/font/google'
 
-const antonio = Antonio({ subsets: ["latin"] });
 const spartan = League_Spartan({ subsets: ["latin"] });
 
 
@@ -17,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={spartan.className}>{children}</body>
+      <body className={`${spartan.className} bg-background`}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
