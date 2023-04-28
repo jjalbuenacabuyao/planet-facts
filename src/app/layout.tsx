@@ -1,7 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Antonio, League_Spartan } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const antonio = Antonio({ subsets: ["latin"] });
+const spartan = League_Spartan({ subsets: ["latin"] });
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={spartan.className}>{children}</body>
     </html>
   )
 }
