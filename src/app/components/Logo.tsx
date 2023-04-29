@@ -8,7 +8,7 @@ const antonio = Antonio({subsets: ["latin"]});
 const Logo = () => {
   return (
     <Link href={"/"} className="z-50">
-      <span className={`${antonio.className} uppercase text-white text-xl`}>
+      <span className={`${antonio.className} uppercase text-white text-2xl`}>
         The Planets
       </span>
     </Link>
