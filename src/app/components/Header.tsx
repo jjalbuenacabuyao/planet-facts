@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="py-4 px-6 relative flex items-center justify-between">
       <Logo />
-      <Navigation />
+      <Navigation navOpen={navOpen} />
       <MenuButton navOpen={navOpen} setNavOpen={setNavOpen} />
     </header>
   )
