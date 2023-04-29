@@ -2,10 +2,14 @@
 
 import Link from "next/link"
 
-const Navigation = () => {
+interface Props {
+  navOpen: boolean;
+}
+
+const Navigation = ({navOpen} : Props) => {
   const navlinks = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
   return (
-    <nav className="absolute inset-0">
+    <nav className={`absolute inset-0 translate-x-full transition ${navOpen && "translate-x-0"}`}>
       <ul>
         {navlinks.map(link => (
           <li key={link}>
