@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import { Antonio } from "next/font/google";
 

@@ -1,9 +1,11 @@
+"use client";
+
 import Link from "next/link"
 
 const Navigation = () => {
   const navlinks = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
   return (
-    <nav>
+    <nav className="absolute inset-0">
       <ul>
         {navlinks.map(link => (
           <li key={link}>
