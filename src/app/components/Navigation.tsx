@@ -19,7 +19,7 @@ const Navigation = ({ navOpen }: Props) => {
   ];
   return (
     <nav>
-      <ul className={`absolute inset-0 transition w-full ${
+      <ul className={`fixed inset-0 transition w-full ${
         navOpen ? "translate-x-0" : "translate-x-full"
       }`}>
         {navlinks.map((link) => (
