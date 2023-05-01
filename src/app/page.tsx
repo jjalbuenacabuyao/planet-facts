@@ -1,9 +1,10 @@
 import Grid from "./components/Grid";
+import { mercury } from "./constants";
 
 export default function Home() {
   return (
     <main>
-      <Grid />
+      <Grid planet={mercury} />
     </main>
   )
 }
