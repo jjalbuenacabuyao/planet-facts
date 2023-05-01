@@ -4,6 +4,7 @@ import { useState } from "react";
 import SecondaryNavigation from "./SecondaryNavigation";
 import Planet from "../types/Planet";
 import PlanetImage from "./PlanetImage"
+import PlanetDescription from "./PlanetDescription";
 
 interface Props {
   planet: Planet;
@@ -15,6 +16,7 @@ const Grid = ({planet}: Props) => {
     <div>
       <SecondaryNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
       <PlanetImage activeTab={activeTab} planet={planet} />
+      <PlanetDescription planet={planet} activeTab={activeTab} />
     </div>
   )
 }
