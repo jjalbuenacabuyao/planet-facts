@@ -1,11 +1,20 @@
 "use client";
 
-import SecondaryNavigation from "./SecondaryNavigation"
+import { useState } from "react";
+import SecondaryNavigation from "./SecondaryNavigation";
+import Planet from "../types/Planet";
+import PlanetImage from "./PlanetImage"
 
-const Grid = () => {
+interface Props {
+  planet: Planet;
+}
+
+const Grid = ({planet}: Props) => {
+  const [activeTab, setActiveTab] = useState("Overview");
   return (
     <div>
-      <SecondaryNavigation />
+      <SecondaryNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
+      <PlanetImage activeTab={activeTab} planet={planet} />
     </div>
   )
 }
