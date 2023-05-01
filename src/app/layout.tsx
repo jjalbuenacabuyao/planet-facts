@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${spartan.className} bg-background text-white`}>
+      <body className={`${spartan.className} bg-background text-white bg-star overflow-x-hidden w-full`}>
         <Header />
         {children}
       </body>
