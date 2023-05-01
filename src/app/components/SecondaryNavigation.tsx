@@ -9,7 +9,7 @@ interface Props {
 
 const SecondaryNavigation = ({ activeTab, setActiveTab}: Props) => {
   return (
-    <ul className="px-6 flex justify-between">
+    <ul className="px-6 flex justify-between border-b-[1px] border-b-gray">
       <li>
         <button className={`py-5 uppercase text-xs tracking-[1.9px] ${activeTab === "Overview" ? "opacity-100 font-semibold" : "opacity-80"}`} onClick={() => setActiveTab("Overview")}>
           Overview
