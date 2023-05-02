@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import SecondaryNavigation from "./SecondaryNavigation";
-import Planet from "../types/Planet";
 import PlanetImage from "./PlanetImage"
 import PlanetDescription from "./PlanetDescription";
 import PlanetInformation from "./PlanetInformation";
