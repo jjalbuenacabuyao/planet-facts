@@ -20,7 +20,8 @@ const mars = {
     "planet": "/images/planet-mars.svg",
     "internal": "/images/planet-mars-internal.svg",
     "geology": "/images/geology-mars.png"
-  }
+  },
+  "colorTheme": "hsl(10, 63%, 51%)",
 }
 
 export default mars;

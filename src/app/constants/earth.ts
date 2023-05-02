@@ -20,7 +20,8 @@ const earth = {
     "planet": "/images/planet-earth.svg",
     "internal": "/images/planet-earth-internal.svg",
     "geology": "/images/geology-earth.png"
-  }
+  },
+  "colorTheme": "hsl(222, 87%, 56%)",
 }
 
 export default earth;

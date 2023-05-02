@@ -20,7 +20,8 @@ const uranus = {
     "planet": "/images/planet-uranus.svg",
     "internal": "/images/planet-uranus-internal.svg",
     "geology": "/images/geology-uranus.png"
-  }
+  },
+  "colorTheme": "hsl(169, 73%, 44%)",
 }
 
 export default uranus;

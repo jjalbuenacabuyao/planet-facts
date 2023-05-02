@@ -20,7 +20,8 @@ const venus = {
     "planet": "/images/planet-venus.svg",
     "internal": "/images/planet-venus-internal.svg",
     "geology": "/images/geology-venus.png"
-  }
+  },
+  "colorTheme": "hsl(17, 73%, 46%)",
 }
 
 export default venus;

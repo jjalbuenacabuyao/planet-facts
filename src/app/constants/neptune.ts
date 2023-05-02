@@ -20,7 +20,8 @@ const neptune = {
     "planet": "/images/planet-neptune.svg",
     "internal": "/images/planet-neptune-internal.svg",
     "geology": "/images/geology-neptune.png"
-  }
+  },
+  "colorTheme": "hsl(194, 48%, 49%)",
 }
 
 export default neptune;

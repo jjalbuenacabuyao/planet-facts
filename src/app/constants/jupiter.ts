@@ -20,7 +20,8 @@ const jupiter =  {
     "planet": "/images/planet-jupiter.svg",
     "internal": "/images/planet-jupiter-internal.svg",
     "geology": "/images/geology-jupiter.png"
-  }
+  },
+  "colorTheme": "hsl(2, 68%, 53%)",
 }
 
 export default jupiter;

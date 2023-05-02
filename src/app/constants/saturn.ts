@@ -20,7 +20,8 @@ const saturn = {
     "planet": "/images/planet-saturn.svg",
     "internal": "/images/planet-saturn-internal.svg",
     "geology": "/images/geology-saturn.png"
-  }
+  },
+  "colorTheme": "hsl(33, 82%, 61%)",
 }
 
 export default saturn;

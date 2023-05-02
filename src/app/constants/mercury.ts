@@ -20,7 +20,8 @@ const mercury = {
     "planet": "/images/planet-mercury.svg",
     "internal": "/images/planet-mercury-internal.svg",
     "geology": "/images/geology-mercury.png"
-  }
+  },
+  "colorTheme": "hsl(194, 48%, 49%)",
 }
 
 export default mercury;
