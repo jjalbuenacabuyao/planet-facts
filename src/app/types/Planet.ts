@@ -19,6 +19,7 @@ interface Planet {
   radius: string;
   temperature: string;
   images: PlanetImages;
+  colorTheme: string;
 }
 
 export default Planet;
