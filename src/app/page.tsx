@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <PlanetContext.Provider value={mercury}>
       <main>
-        <Grid planet={mercury} />
+        <Grid />
       </main>
     </PlanetContext.Provider>
   );
