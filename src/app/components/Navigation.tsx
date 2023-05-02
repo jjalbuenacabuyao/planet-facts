@@ -19,12 +19,15 @@ const Navigation = ({ navOpen }: Props) => {
   ];
   return (
     <nav>
-      <ul className={`fixed inset-0 transition w-full ${
+      <ul className={`fixed inset-0 transition w-full md:static md:translate-x-0 md:flex md:gap-8 ${
         navOpen ? "translate-x-0" : "translate-x-full"
       }`}>
         {navlinks.map((link) => (
           <li key={link}>
-            <Link href={`/${link === "Mercury" ? "/" : link.toLowerCase()}`}>
+            <Link 
+              href={`/${link === "Mercury" ? "/" : link.toLowerCase()}`}
+              className="uppercase tracking-widest text-sm font-semibold"
+            >
               {link}
             </Link>
           </li>
