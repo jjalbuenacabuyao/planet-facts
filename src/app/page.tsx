@@ -1,10 +1,15 @@
+"use client";
+
 import Grid from "./components/Grid";
 import { mercury } from "./constants";
+import PlanetContext from "./hooks/PlanetContext";
 
 export default function Home() {
   return (
-    <main>
-      <Grid planet={mercury} />
-    </main>
-  )
+    <PlanetContext.Provider value={mercury}>
+      <main>
+        <Grid planet={mercury} />
+      </main>
+    </PlanetContext.Provider>
+  );
 }
