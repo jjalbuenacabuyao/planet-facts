@@ -10,7 +10,7 @@ const Grid = () => {
   const [activeTab, setActiveTab] = useState("Overview");
 
   return (
-    <div>
+    <div className="md:grid md:grid-cols-2">
       <SecondaryNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
       <PlanetImage activeTab={activeTab} />
       <PlanetDescription activeTab={activeTab} />
