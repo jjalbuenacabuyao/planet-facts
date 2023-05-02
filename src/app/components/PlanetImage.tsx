@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Planet from "../types/Planet";
+import { usePlanetContext } from "../hooks/PlanetContext";
 
 interface Props {
-  planet: Planet;
   activeTab: string;
 }
 
-const PlanetImage = ({ planet, activeTab }: Props) => {
+const PlanetImage = ({ activeTab }: Props) => {
+  const planet = usePlanetContext();
   const { images, ...props } = planet;
   return (
     <div className="grid place-items-center py-20 relative">

@@ -5,15 +5,16 @@ import Planet from "../types/Planet";
 
 import { Antonio } from "next/font/google";
 import Image from "next/image";
+import { usePlanetContext } from "../hooks/PlanetContext";
 
 const antonio = Antonio({ subsets: ["latin"] });
 
 interface Props {
-  planet: Planet;
   activeTab: string;
 }
 
-const PlanetDescription = ({ planet, activeTab }: Props) => {
+const PlanetDescription = ({ activeTab }: Props) => {
+  const planet = usePlanetContext();
   const { name, overview, structure, geology, ...props } = planet;
 
   return (
