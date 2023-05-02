@@ -1,7 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction } from "react";
-import { usePlanetContext } from "../hooks/PlanetContext";
+import SecondaryNavItem from "./SecondaryNavItem";
 
 interface Props {
   activeTab: string;
@@ -9,48 +9,20 @@ interface Props {
 }
 
 const SecondaryNavigation = ({ activeTab, setActiveTab }: Props) => {
-  const { colorTheme } = usePlanetContext();
+  const links = ["Overview", "Internal Structure", "Surface Geology"];
+
   return (
-    <ul className="px-6 flex justify-between border-b-[1px] border-b-gray">
-      <li>
-        <button
-          className={`py-5 uppercase text-xs tracking-[1.9px] ${
-            activeTab === "Overview"
-              ? "opacity-100 font-semibold border-b-4"
-              : "opacity-80"
-          }`}
-          onClick={() => setActiveTab("Overview")}
-          style={{ borderBottomColor: `${colorTheme}` }}
-        >
-          Overview
-        </button>
-      </li>
-
-      <li>
-        <button
-          className={`py-5 uppercase text-xs tracking-[1.9px] ${
-            activeTab === "Internal"
-              ? "opacity-100 font-semibold border-b-4"
-              : "opacity-80"
-          }`}
-          onClick={() => setActiveTab("Internal")}
-          style={{ borderBottomColor: `${colorTheme}` }}
-        >
-          Internal <span className="hidden md:block">Structure</span>
-        </button>
-      </li>
-
-      <li>
-        <button
-          className={`py-5 uppercase text-xs  tracking-[1.9px] ${
-            activeTab === "Surface" ? "opacity-100 font-semibold border-b-4" : "opacity-80"
-          }`}
-          onClick={() => setActiveTab("Surface")}
-          style={{ borderBottomColor: `${colorTheme}` }}
-        >
-          Surface <span className="hidden md:block">Geology</span>
-        </button>
-      </li>
+    <ul className="px-6 flex justify-between border-b-[1px] border-b-gray md:border-none md:col-start-2 md:flex-col md:gap-4 md:justify-center">
+      {links.map((item, index) => (
+        <SecondaryNavItem
+          key={item}
+          title1={item === "Internal Structure" ? "Internal" : item === "Surface Geology" ? "Surface" : item}
+          number={String(index + 1)}
+          title2={item === "Internal Structure" ? "Structure" : item === "Surface Geology" ? "Geology" : ""}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        />
+      ))}
     </ul>
   );
 };
