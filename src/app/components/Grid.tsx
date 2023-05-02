@@ -6,17 +6,14 @@ import Planet from "../types/Planet";
 import PlanetImage from "./PlanetImage"
 import PlanetDescription from "./PlanetDescription";
 
-interface Props {
-  planet: Planet;
-}
-
-const Grid = ({planet}: Props) => {
+const Grid = () => {
   const [activeTab, setActiveTab] = useState("Overview");
+
   return (
     <div>
       <SecondaryNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
-      <PlanetImage activeTab={activeTab} planet={planet} />
-      <PlanetDescription planet={planet} activeTab={activeTab} />
+      <PlanetImage activeTab={activeTab} />
+      <PlanetDescription activeTab={activeTab} />
     </div>
   )
 }
