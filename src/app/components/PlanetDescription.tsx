@@ -18,7 +18,7 @@ const PlanetDescription = ({ activeTab }: Props) => {
   const { name, overview, structure, geology, ...props } = planet;
 
   return (
-    <div className="text-center px-6 flex flex-col gap-4">
+    <div className="text-center px-6 flex flex-col gap-4 md:col-start-1 md:row-start-2">
       <h1 className={`${antonio.className} text-4xl`}>{name}</h1>
       <p className="opacity-70 font-light">
         {activeTab === "Overview"
