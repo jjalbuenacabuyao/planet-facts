@@ -16,11 +16,23 @@ const SecondaryNavigation = ({ activeTab, setActiveTab }: Props) => {
       {links.map((item, index) => (
         <SecondaryNavItem
           key={item}
-          title1={item === "Internal Structure" ? "Internal" : item === "Surface Geology" ? "Surface" : item}
-          number={String(index + 1)}
-          title2={item === "Internal Structure" ? "Structure" : item === "Surface Geology" ? "Geology" : ""}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
+          title1={
+            item === "Internal Structure"
+              ? "Internal"
+              : item === "Surface Geology"
+              ? "Surface"
+              : item
+          }
+          number={String(index + 1)}
+          title2={
+            item === "Internal Structure"
+              ? "Structure"
+              : item === "Surface Geology"
+              ? "Geology"
+              : ""
+          }
         />
       ))}
     </ul>
