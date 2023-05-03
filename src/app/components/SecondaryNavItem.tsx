@@ -1,22 +1,20 @@
 import React, { Dispatch, SetStateAction } from "react";
 import { usePlanetContext } from "../hooks/PlanetContext";
+import { useActiveTabContext } from "../hooks/ActiveTabContext";
 
 interface Props {
-  activeTab: string;
-  setActiveTab: Dispatch<SetStateAction<string>>;
   title1: string;
   title2?: string;
   number: string;
 }
 
 const SecondaryNavItem = ({
-  activeTab,
-  setActiveTab,
   title1,
   number,
   title2,
 }: Props) => {
   const { name } = usePlanetContext();
+  const { activeTab, setActiveTab } = useActiveTabContext();
   return (
     <li>
       <button

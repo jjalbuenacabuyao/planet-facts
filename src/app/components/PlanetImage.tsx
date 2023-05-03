@@ -2,14 +2,13 @@
 
 import Image from "next/image";
 import { usePlanetContext } from "../hooks/PlanetContext";
+import { useActiveTabContext } from "../hooks/ActiveTabContext";
 
-interface Props {
-  activeTab: string;
-}
-
-const PlanetImage = ({ activeTab }: Props) => {
+const PlanetImage = () => {
   const planet = usePlanetContext();
-  const { images, ...props } = planet;
+  const {activeTab} = useActiveTabContext();
+
+  const { images } = planet;
   return (
     <div className="grid place-items-center py-20 relative md:col-span-2 md:row-start-1">
       <Image

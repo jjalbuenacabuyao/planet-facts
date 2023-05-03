@@ -1,21 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import Planet from "../types/Planet";
-
 import { Antonio } from "next/font/google";
 import Image from "next/image";
 import { usePlanetContext } from "../hooks/PlanetContext";
+import { useActiveTabContext } from "../hooks/ActiveTabContext";
 
 const antonio = Antonio({ subsets: ["latin"] });
 
-interface Props {
-  activeTab: string;
-}
-
-const PlanetDescription = ({ activeTab }: Props) => {
+const PlanetDescription = () => {
   const planet = usePlanetContext();
-  const { name, overview, structure, geology, ...props } = planet;
+  const {activeTab} = useActiveTabContext();
+  const { name, overview, structure, geology } = planet;
 
   return (
     <div className="text-center px-6 flex flex-col gap-4 md:col-start-1 md:row-start-2">

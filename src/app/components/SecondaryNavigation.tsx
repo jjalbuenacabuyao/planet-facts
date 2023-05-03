@@ -1,14 +1,8 @@
 "use client";
 
-import { Dispatch, SetStateAction } from "react";
 import SecondaryNavItem from "./SecondaryNavItem";
 
-interface Props {
-  activeTab: string;
-  setActiveTab: Dispatch<SetStateAction<string>>;
-}
-
-const SecondaryNavigation = ({ activeTab, setActiveTab }: Props) => {
+const SecondaryNavigation = () => {
   const links = ["Overview", "Internal Structure", "Surface Geology"];
 
   return (
@@ -16,8 +10,6 @@ const SecondaryNavigation = ({ activeTab, setActiveTab }: Props) => {
       {links.map((item, index) => (
         <SecondaryNavItem
           key={item}
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
           title1={
             item === "Internal Structure"
               ? "Internal"
