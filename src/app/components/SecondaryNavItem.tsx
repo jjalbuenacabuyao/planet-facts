@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction } from "react";
+"use client";
+
 import { usePlanetContext } from "../hooks/PlanetContext";
 import { useActiveTabContext } from "../hooks/ActiveTabContext";
 
