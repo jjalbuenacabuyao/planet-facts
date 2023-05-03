@@ -2,21 +2,24 @@
 
 import { useState } from "react";
 import SecondaryNavigation from "./SecondaryNavigation";
-import PlanetImage from "./PlanetImage"
+import PlanetImage from "./PlanetImage";
 import PlanetDescription from "./PlanetDescription";
 import PlanetInformation from "./PlanetInformation";
+import ActiveTabContext from "../hooks/ActiveTabContext";
 
 const Grid = () => {
   const [activeTab, setActiveTab] = useState("Overview");
 
   return (
-    <div className="md:grid md:grid-cols-2">
-      <SecondaryNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
-      <PlanetImage activeTab={activeTab} />
-      <PlanetDescription activeTab={activeTab} />
-      <PlanetInformation />
-    </div>
-  )
-}
+    <ActiveTabContext.Provider value={{ activeTab, setActiveTab }}>
+      <div className="md:grid md:grid-cols-2">
+        <SecondaryNavigation />
+        <PlanetImage />
+        <PlanetDescription />
+        <PlanetInformation />
+      </div>
+    </ActiveTabContext.Provider>
+  );
+};
 
-export default Grid
+export default Grid;
