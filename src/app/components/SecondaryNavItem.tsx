@@ -16,7 +16,7 @@ const SecondaryNavItem = ({
   const { name } = usePlanetContext();
   const { activeTab, setActiveTab } = useActiveTabContext();
   return (
-    <li>
+    <li className="md:w-full md:max-w-xs">
       <button
         className={`py-5 uppercase text-xs tracking-[1.9px] ${
           activeTab === title1

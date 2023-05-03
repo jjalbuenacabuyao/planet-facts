@@ -14,7 +14,7 @@ const PlanetDescription = () => {
   const { name, overview, structure, geology } = planet;
 
   return (
-    <div className="text-center px-6 flex flex-col gap-4 md:col-start-1 md:row-start-2">
+    <div className="text-center px-6 flex flex-col gap-4 md:text-left md:col-start-1 md:row-start-2 md:pl-10">
       <h1 className={`${antonio.className} text-4xl`}>{name}</h1>
       <p className="opacity-70 font-light">
         {activeTab === "Overview"
