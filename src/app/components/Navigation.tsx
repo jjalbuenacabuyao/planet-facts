@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { Dispatch, SetStateAction } from "react"
 
 interface Props {
   navOpen: boolean;
+  setNavOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const Navigation = ({ navOpen }: Props) => {
+const Navigation = ({ navOpen, setNavOpen }: Props) => {
   const navlinks = [
     "Mercury",
     "Venus",
@@ -26,6 +28,7 @@ const Navigation = ({ navOpen }: Props) => {
           <li key={link}>
             <Link 
               href={`/${link === "Mercury" ? "/" : link.toLowerCase()}`}
+              onClick={() => setNavOpen(!navOpen)}
               className="uppercase tracking-widest text-sm font-semibold"
             >
               {link}
