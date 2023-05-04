@@ -26,7 +26,7 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
 
     navOpen ? bodyOverflowStyles.overflowY = "hidden"
             : bodyOverflowStyles.overflowY = "auto";
-            
+
   }, [navOpen])
 
   const navlinks = [
@@ -66,7 +66,7 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
   return (
     <nav>
       <ul
-        className={`fixed bg-background z-50 px-6 inset-0 transition w-full mt-[70px] md:static md:translate-x-0 md:flex md:gap-8 ${
+        className={`fixed bg-background z-50 px-6 inset-0 transition w-full mt-[70px] md:static md:translate-x-0 md:flex md:gap-8 md:bg-transparent md:mt-0 md:px-0 ${
           navOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -76,8 +76,8 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
             href={`/${name === "Mercury" ? "/" : name.toLowerCase()}`}
             onClick={() => setNavOpen(!navOpen)}
           >
-            <li className="flex items-center gap-6 leading-none p-4 border-b border-b-gray">
-              <Image src={icon} alt={name} width={16} height={16} />
+            <li className="flex items-center gap-6 leading-none p-4 border-b border-b-gray md:border-none md:px-0">
+              <Image src={icon} alt={name} width={16} height={16} className="md:hidden" />
               <span className="leading-none uppercase tracking-widest text-sm font-semibold">
                 {name}
               </span>
