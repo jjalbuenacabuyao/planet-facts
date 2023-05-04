@@ -12,7 +12,7 @@ const Grid = () => {
 
   return (
     <ActiveTabContext.Provider value={{ activeTab, setActiveTab }}>
-      <div className="md:grid md:grid-cols-2">
+      <div className="md:grid md:grid-cols-2 md:max-w-4xl md:m-auto">
         <SecondaryNavigation />
         <PlanetImage />
         <PlanetDescription />
