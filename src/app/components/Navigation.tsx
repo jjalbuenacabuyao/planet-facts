@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 import {
   earth,
   jupiter,
@@ -20,6 +20,15 @@ interface Props {
 }
 
 const Navigation = ({ navOpen, setNavOpen }: Props) => {
+
+  useEffect(() => {
+    const bodyOverflowStyles = document.body.style
+
+    navOpen ? bodyOverflowStyles.overflowY = "hidden"
+            : bodyOverflowStyles.overflowY = "auto";
+            
+  }, [navOpen])
+
   const navlinks = [
     {
       name: "Mercury",
