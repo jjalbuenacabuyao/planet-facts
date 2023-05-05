@@ -9,7 +9,7 @@ const PlanetInformation = () => {
   const planetInfo = ["Rotation Time", "Revolution Time", "Radius", "Average Temp."];
 
   return (
-    <ul className="px-6 md:px-10 flex flex-col gap-2 mt-7 mb-12 md:col-span-2 md:flex-row">
+    <ul className="px-6 md:px-10 flex flex-col gap-2 mt-7 mb-12 md:col-span-2 md:flex-row lg:col-span-3 lg:px-14">
       {planetInfo.map((item, index) => (
         <PlanetInfoContainer key={item} title={item} value={infoValues[index]} />
       ))}

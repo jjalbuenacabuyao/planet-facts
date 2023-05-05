@@ -32,7 +32,6 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
   }, [navOpen]);
 
   const path = usePathname();
-  console.log(path);
 
   const navlinks = [
     {
@@ -82,26 +81,26 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
             onClick={() => setNavOpen(!navOpen)}
             className={`${
               path === "/earth" && name === "Earth"
-                ? "md:border-b-4 border-b-bright-blue"
+                ? "md:border-b-4 lg:border-t-4 border-bright-blue"
                 : path === "/jupiter" && name == "Jupiter"
-                ? "md:border-b-4 border-b-red"
+                ? "md:border-b-4 lg:border-t-4 border-red"
                 : path === "/mars" && name === "Mars"
-                ? "md:border-b-4 border-b-dark-red"
+                ? "md:border-b-4 lg:border-t-4 border-dark-red"
                 : path === "/" && name === "Mercury"
-                ? "md:border-b-4 border-b-blue"
+                ? "md:border-b-4 lg:border-t-4 border-blue"
                 : path === "/neptune" && name === "Neptune"
-                ? "md:border-b-4 border-b-blue"
+                ? "md:border-b-4 lg:border-t-4 border-blue"
                 : path === "/saturn" && name === "Saturn"
-                ? "md:border-b-4 border-b-yellow"
+                ? "md:border-b-4 lg:border-t-4 border-yellow"
                 : path === "/uranus" && name === "Uranus"
-                ? "md:border-b-4 border-b-light-green"
+                ? "md:border-b-4 lg:border-t-4 border-light-green"
                 : path === "/venus" && name === "Venus"
-                ? "md:border-b-4 border-b-orange"
+                ? "md:border-b-4 lg:border-t-4 border-orange"
                 : ""
-            }`}
+            } lg:border-b-0`}
           >
             <li
-              className={`flex items-center gap-6 leading-none p-4 border-b border-b-gray md:border-none md:px-0`}
+              className={`flex items-center gap-6 leading-none p-4 border-b border-b-gray md:border-none md:px-0 lg:py-8`}
             >
               <Image
                 src={icon}

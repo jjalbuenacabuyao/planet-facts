@@ -6,7 +6,7 @@ const SecondaryNavigation = () => {
   const links = ["Overview", "Internal Structure", "Surface Geology"];
 
   return (
-    <ul className="px-6 flex justify-between border-b-[1px] border-b-gray md:border-none md:col-start-2 md:flex-col md:gap-4 md:justify-center md:pr-10 md:items-end">
+    <ul className="px-6 flex justify-between border-b-[1px] border-b-gray md:border-none md:col-start-2 md:flex-col md:gap-4 md:justify-center md:pr-10 md:items-end lg:col-start-3 lg:pl-0 lg:justify-start lg:pr-14">
       {links.map((item, index) => (
         <SecondaryNavItem
           key={item}

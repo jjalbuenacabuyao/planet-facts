@@ -10,7 +10,7 @@ const PlanetImage = () => {
 
   const { images } = planet;
   return (
-    <div className="grid place-items-center py-20 relative md:col-span-2 md:row-start-1 md:py-32">
+    <div className="grid place-items-center py-20 relative md:col-span-2 md:row-start-1 md:py-32 lg:row-span-2 lg:row-start-1">
       <Image
         src={
           activeTab === "Internal"
