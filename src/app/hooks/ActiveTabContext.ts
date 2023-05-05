@@ -1,7 +1,7 @@
 import { createContext, Dispatch, SetStateAction, useContext } from "react";
 
 interface ActiveTabContextProp {
-  activeTab: "Overview" | "Internal" | "Geology";
+  activeTab: string;
   setActiveTab: Dispatch<SetStateAction<string>>;
 }
  
