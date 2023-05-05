@@ -20,14 +20,15 @@ interface Props {
 }
 
 const Navigation = ({ navOpen, setNavOpen }: Props) => {
-
   useEffect(() => {
-    const bodyOverflowStyles = document.body.style
+    const bodyOverflowStyles = document.body.style;
 
-    navOpen ? bodyOverflowStyles.overflowY = "hidden"
-            : bodyOverflowStyles.overflowY = "auto";
-
-  }, [navOpen])
+    if (window.innerWidth < 768) {
+      navOpen
+        ? (bodyOverflowStyles.overflowY = "hidden")
+        : (bodyOverflowStyles.overflowY = "auto");
+    }
+  }, [navOpen]);
 
   const navlinks = [
     {
@@ -77,7 +78,13 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
             onClick={() => setNavOpen(!navOpen)}
           >
             <li className="flex items-center gap-6 leading-none p-4 border-b border-b-gray md:border-none md:px-0">
-              <Image src={icon} alt={name} width={16} height={16} className="md:hidden" />
+              <Image
+                src={icon}
+                alt={name}
+                width={16}
+                height={16}
+                className="md:hidden"
+              />
               <span className="leading-none uppercase tracking-widest text-sm font-semibold">
                 {name}
               </span>
