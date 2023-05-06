@@ -14,7 +14,7 @@ const PlanetInformation = () => {
   ];
 
   return (
-    <ul className="mb-12 mt-7 flex flex-col gap-2 px-6 md:col-span-2 md:flex-row md:px-10 lg:col-span-3 lg:px-14">
+    <ul className="mb-12 mt-7 flex flex-col gap-2 px-6 md:col-span-2 md:flex-row md:px-10 lg:col-span-3 lg:px-14 lg:gap-6">
       {planetInfo.map((item, index) => (
         <PlanetInfoContainer
           key={item}
