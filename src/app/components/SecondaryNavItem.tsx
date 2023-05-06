@@ -15,7 +15,7 @@ const SecondaryNavItem = ({ title1, number, title2 }: Props) => {
   return (
     <li className="md:w-full md:max-w-xs lg:max-w-none">
       <button
-        className={`py-5 text-xs uppercase tracking-[1.9px] ${
+        className={`py-5 text-xs lg:text-sm uppercase tracking-[1.9px] ${
           activeTab === title1
             ? "border-b-4 font-semibold opacity-100"
             : "opacity-80"
