@@ -1,9 +1,11 @@
 "use client";
 
+import Loader from "../components/Loader";
+
 
 const loading = () => {
   return (
-    <div>loading.........</div>
+    <Loader />
   )
 }
 
