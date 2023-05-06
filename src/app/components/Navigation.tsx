@@ -70,7 +70,7 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
   return (
     <nav>
       <ul
-        className={`fixed bg-background z-50 px-6 inset-0 transition w-full mt-[70px] md:static md:translate-x-0 md:flex md:gap-8 md:bg-transparent md:mt-0 md:px-0 ${
+        className={`fixed inset-0 z-50 mt-[70px] w-full bg-background px-6 transition md:static md:mt-0 md:flex md:translate-x-0 md:gap-8 md:bg-transparent md:px-0 ${
           navOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -81,26 +81,26 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
             onClick={() => setNavOpen(!navOpen)}
             className={`${
               path === "/earth" && name === "Earth"
-                ? "md:border-b-4 lg:border-t-4 border-bright-blue"
+                ? "border-bright-blue md:border-b-4 lg:border-t-4"
                 : path === "/jupiter" && name == "Jupiter"
-                ? "md:border-b-4 lg:border-t-4 border-red"
+                ? "border-red md:border-b-4 lg:border-t-4"
                 : path === "/mars" && name === "Mars"
-                ? "md:border-b-4 lg:border-t-4 border-dark-red"
+                ? "border-dark-red md:border-b-4 lg:border-t-4"
                 : path === "/" && name === "Mercury"
-                ? "md:border-b-4 lg:border-t-4 border-blue"
+                ? "border-blue md:border-b-4 lg:border-t-4"
                 : path === "/neptune" && name === "Neptune"
-                ? "md:border-b-4 lg:border-t-4 border-blue"
+                ? "border-blue md:border-b-4 lg:border-t-4"
                 : path === "/saturn" && name === "Saturn"
-                ? "md:border-b-4 lg:border-t-4 border-yellow"
+                ? "border-yellow md:border-b-4 lg:border-t-4"
                 : path === "/uranus" && name === "Uranus"
-                ? "md:border-b-4 lg:border-t-4 border-light-green"
+                ? "border-light-green md:border-b-4 lg:border-t-4"
                 : path === "/venus" && name === "Venus"
-                ? "md:border-b-4 lg:border-t-4 border-orange"
+                ? "border-orange md:border-b-4 lg:border-t-4"
                 : ""
             } lg:border-b-0`}
           >
             <li
-              className={`flex items-center gap-6 leading-none p-4 border-b border-b-gray md:border-none md:px-0 lg:py-8`}
+              className={`flex items-center gap-6 border-b border-b-gray p-4 leading-none md:border-none md:px-0 lg:py-8`}
             >
               <Image
                 src={icon}
@@ -109,7 +109,7 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
                 height={16}
                 className="md:hidden"
               />
-              <span className="leading-none uppercase tracking-widest text-sm font-semibold">
+              <span className="text-sm font-semibold uppercase leading-none tracking-widest">
                 {name}
               </span>
             </li>

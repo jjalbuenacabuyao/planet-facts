@@ -10,13 +10,13 @@ const antonio = Antonio({ subsets: ["latin"] });
 
 const PlanetDescription = () => {
   const planet = usePlanetContext();
-  const {activeTab} = useActiveTabContext();
+  const { activeTab } = useActiveTabContext();
   const { name, overview, structure, geology } = planet;
 
   return (
-    <div className="text-center px-6 flex flex-col gap-4 md:text-left md:col-start-1 md:row-start-2 md:pl-10 md:gap-6 lg:row-start-1 lg:col-start-3 lg:pl-0 lg:justify-end lg:mb-8 lg:pr-14">
+    <div className="flex flex-col gap-4 px-6 text-center md:col-start-1 md:row-start-2 md:gap-6 md:pl-10 md:text-left lg:col-start-3 lg:row-start-1 lg:mb-8 lg:justify-end lg:pl-0 lg:pr-14">
       <h1 className={`${antonio.className} text-4xl md:text-5xl`}>{name}</h1>
-      <p className="opacity-70 font-light">
+      <p className="font-light opacity-70">
         {activeTab === "Overview"
           ? overview.content
           : activeTab === "Internal"
@@ -25,7 +25,7 @@ const PlanetDescription = () => {
       </p>
       <span className="font-light opacity-70">
         Source:{" "}
-        <span className="inline-flex gap-2 items-center">
+        <span className="inline-flex items-center gap-2">
           <Link
             href={
               activeTab === "Overview"
@@ -38,7 +38,12 @@ const PlanetDescription = () => {
           >
             Wikipedia
           </Link>
-          <Image src={"/images/icon-source.svg"} width={12} height={12} alt="" />
+          <Image
+            src={"/images/icon-source.svg"}
+            width={12}
+            height={12}
+            alt=""
+          />
         </span>
       </span>
     </div>

@@ -9,40 +9,36 @@ interface Props {
   number: string;
 }
 
-const SecondaryNavItem = ({
-  title1,
-  number,
-  title2,
-}: Props) => {
+const SecondaryNavItem = ({ title1, number, title2 }: Props) => {
   const { name } = usePlanetContext();
   const { activeTab, setActiveTab } = useActiveTabContext();
   return (
     <li className="md:w-full md:max-w-xs lg:max-w-none">
       <button
-        className={`py-5 uppercase text-xs tracking-[1.9px] ${
+        className={`py-5 text-xs uppercase tracking-[1.9px] ${
           activeTab === title1
-            ? "opacity-100 font-semibold border-b-4"
+            ? "border-b-4 font-semibold opacity-100"
             : "opacity-80"
         } 
           ${
             name === "Earth" && activeTab === title1
-              ? "md:bg-bright-blue border-b-bright-blue"
+              ? "border-b-bright-blue md:bg-bright-blue"
               : name === "Jupiter" && activeTab === title1
-              ? "md:bg-red border-b-red"
+              ? "border-b-red md:bg-red"
               : name === "Mars" && activeTab === title1
-              ? "md:bg-dark-red border-b-dark-red"
+              ? "border-b-dark-red md:bg-dark-red"
               : name === "Mercury" && activeTab === title1
-              ? "md:bg-blue border-b-blue"
+              ? "border-b-blue md:bg-blue"
               : name === "Neptune" && activeTab === title1
-              ? "md:bg-blue border-b-blue"
+              ? "border-b-blue md:bg-blue"
               : name === "Saturn" && activeTab === title1
-              ? "md:bg-yellow border-b-yellow"
+              ? "border-b-yellow md:bg-yellow"
               : name === "Uranus" && activeTab === title1
-              ? "md:bg-light-green border-b-light-green"
+              ? "border-b-light-green md:bg-light-green"
               : name === "Venus" && activeTab === title1
-              ? "md:bg-orange border-b-orange"
+              ? "border-b-orange md:bg-orange"
               : "bg-transparent"
-          } md:border md:border-gray md:w-full md:text-left md:pl-12 md:py-3`}
+          } md:w-full md:border md:border-gray md:py-3 md:pl-12 md:text-left`}
         onClick={() => setActiveTab(title1)}
       >
         <span className="hidden md:inline">0{number}</span> {title1}{" "}

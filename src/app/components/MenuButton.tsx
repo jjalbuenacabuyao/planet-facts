@@ -11,7 +11,7 @@ interface Props {
 function MenuButton({ navOpen, setNavOpen }: Props) {
   return (
     <button
-      className="block md:hidden z-50"
+      className="z-50 block md:hidden"
       onClick={() => setNavOpen(!navOpen)}
     >
       {navOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
