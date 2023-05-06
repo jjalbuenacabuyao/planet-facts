@@ -22,6 +22,10 @@ module.exports = {
         "orange": "hsl(17, 73%, 46%)",
         "light-green": "hsl(169, 73%, 44%)",
         "bright-blue": "hsl(222, 87%, 56%)"
+      },
+      fontFamily: {
+        "spartan": ["League Spartan", "sans-serif"],
+        "antonio": ["Antonio", "sans-serif"]
       }
     },
   },
