@@ -79,25 +79,25 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
             key={name}
             href={`/${name === "Mercury" ? "/" : name.toLowerCase()}`}
             onClick={() => setNavOpen(!navOpen)}
-            className={`${
+            className={`relative ${
               path === "/earth" && name === "Earth"
-                ? "border-bright-blue md:border-b-4 lg:border-t-4"
+                ? "before:block before:h-1 before:absolute md:before:bottom-0 lg:before:top-0 before:inset-x-0 before:bg-bright-blue"
                 : path === "/jupiter" && name == "Jupiter"
-                ? "border-red md:border-b-4 lg:border-t-4"
+                ? "before:block before:h-1 before:absolute md:before:bottom-0 lg:before:top-0 before:inset-x-0 before:bg-red"
                 : path === "/mars" && name === "Mars"
-                ? "border-dark-red md:border-b-4 lg:border-t-4"
+                ? "before:block before:h-1 before:absolute md:before:bottom-0 lg:before:top-0 before:inset-x-0 before:bg-dark-red"
                 : path === "/" && name === "Mercury"
-                ? "border-blue md:border-b-4 lg:border-t-4"
+                ? "before:block before:h-1 before:absolute md:before:bottom-0 lg:before:top-0 before:inset-x-0 before:bg-blue"
                 : path === "/neptune" && name === "Neptune"
-                ? "border-blue md:border-b-4 lg:border-t-4"
+                ? "before:block before:h-1 before:absolute md:before:bottom-0 lg:before:top-0 before:inset-x-0 before:bg-blue"
                 : path === "/saturn" && name === "Saturn"
-                ? "border-yellow md:border-b-4 lg:border-t-4"
+                ? "before:block before:h-1 before:absolute md:before:bottom-0 lg:before:top-0 before:inset-x-0 before:bg-yellow"
                 : path === "/uranus" && name === "Uranus"
-                ? "border-light-green md:border-b-4 lg:border-t-4"
+                ? "before:block before:h-1 before:absolute md:before:bottom-0 lg:before:top-0 before:inset-x-0 before:bg-light-green"
                 : path === "/venus" && name === "Venus"
-                ? "border-orange md:border-b-4 lg:border-t-4"
+                ? "before:block before:h-1 before:absolute md:before:bottom-0 lg:before:top-0 before:inset-x-0 before:bg-orange"
                 : ""
-            } lg:border-b-0`}
+            }`}
           >
             <li
               className={`flex items-center gap-6 border-b border-b-gray p-4 leading-none md:border-none md:px-0 lg:py-8`}
@@ -109,7 +109,7 @@ const Navigation = ({ navOpen, setNavOpen }: Props) => {
                 height={16}
                 className="md:hidden"
               />
-              <span className="text-sm font-semibold uppercase leading-none tracking-widest">
+              <span className="text-sm font-bold uppercase leading-none tracking-widest">
                 {name}
               </span>
             </li>
