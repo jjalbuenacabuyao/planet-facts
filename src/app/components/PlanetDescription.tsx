@@ -1,12 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Antonio } from "next/font/google";
 import Image from "next/image";
 import { usePlanetContext } from "../hooks/PlanetContext";
 import { useActiveTabContext } from "../hooks/ActiveTabContext";
-
-const antonio = Antonio({ subsets: ["latin"] });
 
 const PlanetDescription = () => {
   const planet = usePlanetContext();
@@ -15,7 +12,7 @@ const PlanetDescription = () => {
 
   return (
     <div className="flex flex-col gap-4 px-6 text-center md:col-start-1 md:row-start-2 md:gap-6 md:pl-10 md:text-left lg:col-start-3 lg:row-start-1 lg:mb-8 lg:justify-end lg:pl-0 lg:pr-14">
-      <h1 className={`${antonio.className} text-4xl md:text-5xl`}>{name}</h1>
+      <h1 className={`font-antonio font-medium text-4xl md:text-5xl`}>{name}</h1>
       <p className="font-light opacity-70">
         {activeTab === "Overview"
           ? overview.content
