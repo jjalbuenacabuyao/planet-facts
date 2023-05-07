@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { usePlanetContext } from "../hooks/PlanetContext";
 import { useActiveTabContext } from "../hooks/ActiveTabContext";
-import { motion,animate } from "framer-motion";
+import { motion } from "framer-motion";
 
 const PlanetImage = () => {
   const planet = usePlanetContext();
